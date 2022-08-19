@@ -7,11 +7,11 @@
         {
           "foreground": "#ffffff",
           "style": "plain",
-          "template": "<#C591E8>\u276f</><#69FF94>\u276f</>",
+          "template": "<#187306>\u276f</><#187306>\u276f</>",
           "type": "text"
         },
         {
-          "foreground": "#56B6C2",
+          "foreground": "#3df53f",
           "properties": {
             "style": "folder"
           },
@@ -20,13 +20,13 @@
           "type": "path"
         },
         {
-          "foreground": "#D0666F",
+          "foreground": "#2dbf00",
           "properties": {
             "branch_icon": "",
             "fetch_status": false
           },
           "style": "plain",
-          "template": "<#5FAAE8>git:(</>{{ .HEAD }}<#5FAAE8>)</>",
+          "template": "<#187306>git:(</>{{ .HEAD }}<#187306>)</>",
           "type": "git"
         },
         {
