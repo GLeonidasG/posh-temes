@@ -5,22 +5,22 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#26C6DA",
+          "foreground": "#CC7730",
           "properties": {
-            "macos": "mac"
+            "macos": "\ue711"
           },
           "style": "plain",
           "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}",
           "type": "os"
         },
         {
-          "foreground": "#26C6DA",
+          "foreground": "#cc7730",
           "style": "plain",
           "template": " {{ .UserName }}: ",
           "type": "session"
         },
         {
-          "foreground": "lightGreen",
+          "foreground": "f2bf68",
           "properties": {
             "style": "folder"
           },
@@ -30,11 +30,13 @@
         },
         {
           "properties": {
-            "branch_icon": "",
-            "fetch_stash_count": true
+            "branch_icon": "\ue725",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "<#ffffff>on</> {{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "template": "<#795f88>on</> {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<#fabd2f> \u25cf </>{{ end }}{{ if .Staging.Changed }}<#8ec07c> \u25cf </>{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "type": "git"
         },
         {
@@ -62,7 +64,7 @@
           "type": "ruby"
         },
         {
-          "foreground": "#ea2d2e",
+          "foreground": "#ff4d4d",
           "style": "powerline",
           "template": "[\ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}] ",
           "type": "java"
